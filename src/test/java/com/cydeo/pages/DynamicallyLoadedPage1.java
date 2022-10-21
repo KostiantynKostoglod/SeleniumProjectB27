@@ -6,27 +6,25 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class DynamicallyLoadedPage1 {
-
     public DynamicallyLoadedPage1(){
-        // this: will give access to all object/webElements from this class to other classes
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy (xpath = "//button[.='Start']")
-    public WebElement startButton;
+    public WebElement startBtn;
 
-    @FindBy (css = "div#loading")
-    public  WebElement loadingBar;
+    @FindBy (id = "loading")
+    public WebElement loadinfBar;
 
-    @FindBy (css = "#username")
-    public WebElement inputUsername;
+    @FindBy (css = "input#username")
+    public WebElement inUserName;
 
-    @FindBy (id ="pwd")
-    public WebElement inputPassword;
+    @FindBy (id = "pwd")
+    public WebElement inPassword;
 
-    @FindBy (xpath = "//button[.='Submit']")
-    public WebElement submitButton;
+    @FindBy (partialLinkText = "Submit")
+    public WebElement submitBtn;
 
-    @FindBy (xpath = "//div[@id='flash']")
-    public WebElement errorMessage;
+    // @FindBy (xpath = "//div[id=flash]")
+    // public void
 }

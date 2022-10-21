@@ -46,7 +46,7 @@ public class ExplicitWaitPractices {
         BrowserUtils.waitForInvisibilityOf(dynamicallyLoadedPage1.loadingBar);
 
         //4. Assert username inputbox is displayed
-        Assert.assertTrue(dynamicallyLoadedPage1.inputUsername.isDisplayed());
+        Assert.assertTrue(dynamicallyLoadedPage1.inUserName.isDisplayed());
 
         //5. Enter username: tomsmith
         dynamicallyLoadedPage1.inputUsername.sendKeys("tomsmith");

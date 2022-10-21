@@ -7,24 +7,22 @@ import org.openqa.selenium.support.PageFactory;
 
 public class InternetSpeedPage {
 
-    public InternetSpeedPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
+public InternetSpeedPage(){
+    PageFactory.initElements(Driver.getDriver(), this);
+}
+    @FindBy (xpath = "//span[.='Go']")
+    public WebElement goBtn;
 
-    // If you have spaces in your locator's content(text) in HTML, you can use "normalize-space()" for text of elements
-    @FindBy (xpath="//a[normalize-space()='Results']")
+@FindBy (xpath = "//a[normalize-space()='Results']")
     public WebElement resultLink;
 
-    @FindBy (xpath ="//span[.='Go']")
-    public WebElement goButton;
+@FindBy (className = "gauge-speed-text")
+    public WebElement gaugeSpaceNeedle;
 
-    @FindBy (className = "gauge-speed-text")
-    public WebElement gaugeSpeedNeedle;
-
-    @FindBy (css = ".result-data-large.number.result-data-value.download-speed")
+@FindBy (css = ".result-data-large.number.result-data-value.download-speed")
     public WebElement downloadSpeed;
 
-    @FindBy (css =".result-data-large.number.result-data-value.upload-speed")
+@FindBy(css = ".result-data-large.number.result-data-value.upload-speed")
     public WebElement uploadSpeed;
 
 }

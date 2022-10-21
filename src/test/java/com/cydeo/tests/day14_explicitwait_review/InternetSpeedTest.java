@@ -21,7 +21,7 @@ public class InternetSpeedTest {
         wait.until(ExpectedConditions.visibilityOf(internetSpeedPage.resultLink));
 
 //        4- Click on Go button
-         internetSpeedPage.goButton.click();
+         internetSpeedPage.goBtn.click();
 
 //        5- Wait until gauge-speed-needle displayed
          wait.until(ExpectedConditions.visibilityOf(internetSpeedPage.gaugeSpeedNeedle));
